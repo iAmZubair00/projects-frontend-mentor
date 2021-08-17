@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{  
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    width: 100vw;
+}
+h5,a,nav{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400;
+}
+.content{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    overflow: hidden;
+    height: 80vh;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    padding: 2em;
+    height: 10vh;
+}
+nav > ul{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 25em;
+}
+nav:after {
+    content: '';
+    position: absolute;
+    left: 46%;
+    right: 0;
+    top: 0;
+    bottom: 50%;
+    background: hsl(207, 33%, 95%);
+    border-radius: 0 0 0 3em;
+    z-index: -1;
+}
+#visual{
+    width: 50%;
+    background-color: hsl(207, 33%, 95%);
+    padding: 3em 4em;
+}
+nav > ul > li{
+    list-style-type: none;
+    color: hsl(230, 29%, 20%);
+    font-weight: 600;
+    margin-right: 2.5em;
+}
+nav > ul > li:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+nav > ul > li:last-of-type{
+    color: hsla(230, 29%, 20%, 0.5);
+    margin-left: 3.5em;
+}
+.content-text{
+    margin-top: 6em;
+    padding-left: 8em;
+    width: 60%;
+}
+.content-text h5{
+    letter-spacing: 0.3rem;
+    word-spacing: 0.3rem;
+}
+.content-text span{
+    letter-spacing: initial;
+    word-spacing: initial;
+}
+.img-devices{
+}
+img[src*='devices']{
+    width: 125%;
+    /* width: 150vw; */
+    margin-top: 3em;
+}
+nav > img[src*='logo']{
+    width: 35px;
+    height: 35px;
+    color: black;
+    background-color: hsl(207, 33%, 95%);
+    margin-left: 2em;
+}
+button.hamburgur{
+    display: none;
+}
+.new-tag{
+    background-color: hsl(230, 29%, 20%);
+    display: inline-block;
+    width: 3em;
+    padding: 4px;
+    border-radius: 2em;
+    color: white;
+    margin-right: 0.7em;
+    text-align: center;
+}
+.content >div > h1{
+    margin-top: 0.3em;
+    margin-bottom: 0.4em;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 3em;
+    color: hsl(230, 29%, 20%);
+    line-height: 1em;
+}
+.content > div > form{
+    margin-top: 3em;
+}
+.content > div > form >a{
+    background-color: hsl(0, 100%, 68%);
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    color: white;
+    margin-right: 0.5em;
+    font-weight: 600;
+}
+.content > div > form > a:hover{
+    background-color: hsla(0, 100%, 68%,0.8);
+}
+.form span{
+    word-spacing: 0.08rem;
+    letter-spacing: 0.05rem;
+    color: hsla(230, 29%, 20%, 0.7);
+    font-size: 16px;
+}
+footer{
+    text-align: center;
+    height: 6vh;
+    color: hsl(230, 29%, 20%);
+    background-color: hsla(230, 29%, 20%, 0.3);
+    padding: 0.6em;
+    font-weight: 800;
+}
+.attribution {
+    font-size: 0.9em;
+    letter-spacing: 1px;
+}
+
+
+
+
+@media (max-width: 375px){
+
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+    height: 84vh;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+    /* height: 10vh; */
+}
+nav > ul{
+    margin-left: 0;
+    display: none;
+}
+nav:after {
+    content: '';
+    position: absolute;
+    left: 46%;
+    right: 0;
+    top: 0;
+    bottom: 50%;
+    background: hsl(207, 33%, 95%);
+    border-radius: 0 0 0 3em;
+    z-index: -1;
+}
+nav > ul > li{
+    list-style-type: none;
+    color: hsl(230, 29%, 20%);
+    font-weight: 600;
+    margin: 0 auto
+}
+nav > ul > li:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+nav > ul > li:last-of-type{
+    color: hsla(230, 29%, 20%, 0.5);
+    margin: 0 auto;
+}
+nav > ul > li:last-of-type::before{
+    content: "";
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    border: 1px solid rgba(160, 161, 172, 0.25);
+    transform:translateY(-0.9rem)
+}
+.active ~ ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: fixed;
+    width: 80vw;
+    height: 26vh;
+    left: 2em;
+    right: 2em;
+    top: 5em;
+    background-color: white;
+    z-index: 20;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+}
+.content-text{
+    margin-top: 6em;
+    padding-left: 2em;
+    width: 100%;
+}
+.img-devices{
+}
+img[src*='devices']{
+    width: 130%;
+    /* width: 150vw; */
+    margin-top: 1em;
+    margin-left: 0.8em;
+}
+nav > img[src*='logo']{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 0;
+}
+button.hamburgur{
+    width: 1.5rem;
+    height: 1.5rem;
+    display: initial;
+    background-image: url(/images/icon-hamburger.svg);
+    border: none;
+    background-repeat: no-repeat;
+}
+button.active{
+    background-image: url(/images/icon-close.svg);
+}
+.new-tag{
+    background-color: hsl(230, 29%, 20%);
+    display: inline-block;
+    width: 3em;
+    padding: 4px;
+    border-radius: 2em;
+    color: white;
+    margin-right: 0.7em;
+    text-align: center;
+}
+.content >div > h1{
+    margin-top: 0.3em;
+    margin-bottom: 0.4em;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+    color: hsl(230, 29%, 20%);
+    line-height: 1em;
+    text-transform: uppercase;
+}
+.content > div > form{
+    margin-top: 2em;
+}
+.content > div > form >a{
+    background-color: hsl(0, 100%, 68%);
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    color: white;
+    margin-right: 0.5em;
+}
+.content > div > form > a:hover{
+    background-color: hsla(0, 100%, 68%,0.8);
+}
+footer{
+    text-align: center;
+    height: 6vh;
+    color: hsl(230, 29%, 20%);
+    background-color: hsla(230, 29%, 20%, 0.3);
+    padding: 0.7em;
+    font-weight: 800;
+}
+.attribution{
+    font-size: 0.8em;
+    letter-spacing: normal;
+}
+
+}
