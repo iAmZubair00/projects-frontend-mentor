@@ -1,0 +1,27 @@
+$mobileWidth:375px;
+$darkVoilet:hsl(256, 26%, 20%);
+$veryDarkVoilet: hsl(270, 9%, 17%);
+$grayishBlue: hsl(216, 30%, 68%);
+$darkGrayishVoilet: hsl(273, 4%, 51%);
+$darkGrayishVoiletOpac: hsla(273, 4%, 51%,0.2);
+$lightGray: hsl(0, 0%, 98%);
+@mixin planBtnStyle($textColor: $darkVoilet,$borderColor: $darkVoilet){
+    padding: 0.5rem 1.5rem;
+    border: 2px solid $borderColor;
+    color: $textColor;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+@mixin flex($justify:initial,$align:initial,$direction:initial) {
+    display: flex;
+    @if $justify!=initial{
+        justify-content: $justify;
+    }
+    @if $align!=initial{
+        align-items: $align;
+    }
+    @if $direction!=initial{
+        flex-direction: $direction;
+    }
+}
