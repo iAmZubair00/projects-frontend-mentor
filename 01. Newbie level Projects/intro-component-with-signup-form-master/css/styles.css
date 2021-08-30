@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #ff7a7a;
+  background-image: url(/images/bg-intro-mobile.png);
+  font-size: 16px;
+  font-family: 'Poppins',sans-serif;
+}
+
+.content-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  padding: 10vw 7vw;
+  text-align: center;
+}
+
+.content-container .text-content {
+  width: 80vw;
+}
+
+.content-container .text-content p {
+  margin-top: 1rem;
+}
+
+.content-container .form-container {
+  margin-top: 3rem;
+}
+
+.content-container .form-container .try-free {
+  background-color: #6055a5;
+  padding: 0.8rem 4.3rem;
+  margin-bottom: 1rem;
+  border-radius: 0.3rem;
+  -webkit-box-shadow: 0.5px 8px rgba(0, 0, 0, 0.15);
+          box-shadow: 0.5px 8px rgba(0, 0, 0, 0.15);
+}
+
+.content-container .form-container .try-free span {
+  font-weight: bold;
+}
+
+.content-container .form-container .form-content {
+  background-color: white;
+  border-radius: 0.3rem;
+  -webkit-box-shadow: 0.5px 8px rgba(0, 0, 0, 0.15);
+          box-shadow: 0.5px 8px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  padding: 1.2rem;
+}
+
+.content-container .form-container .form-content form * {
+  width: 100%;
+}
+
+.content-container .form-container .form-content form input {
+  border: 1px solid #b9b6d3;
+  border-radius: 0.3rem;
+  padding: 1.1rem 1rem;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.content-container .form-container .form-content form input.error-style {
+  border: 1px solid red;
+  background: url(/images/icon-error.svg) no-repeat;
+  background-position-x: right;
+  background-position-y: center;
+  color: red;
+}
+
+.content-container .form-container .form-content form input:focus {
+  border: 1px solid #3e3c49;
+}
+
+.content-container .form-container .form-content form .error {
+  display: none;
+  text-align: end;
+}
+
+.content-container .form-container .form-content form .error.active {
+  color: red;
+  display: block;
+}
+
+.content-container .form-container .form-content form .sbmt-btn {
+  background-color: #38cc8c;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.3rem;
+  color: white;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+.content-container .form-container .form-content form .sbmt-btn:hover {
+  background-color: rgba(56, 204, 140, 0.7);
+}
+
+.content-container .form-container .form-content .terms {
+  margin-top: 0.8rem;
+  color: #b9b6d3;
+}
+
+.content-container .form-container .form-content .terms span {
+  color: #ff7a7a;
+}
+
+@media (min-width: 900px) {
+  .content-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .content-container .text-content {
+    width: 30vw;
+    text-align: left;
+  }
+  .content-container .text-content h1 {
+    font-size: 2.7em;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,20 @@
+
+/* reset default margin,padding of everything to zero and set border-box*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+/* set default body styles */
+body{
+   /*  line-height: 1.5; */
+}

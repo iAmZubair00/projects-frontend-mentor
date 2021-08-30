@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <header class="light">
+      <h1>Social Media Dashboard</h1>
+      <p>Total Followers: 23,004</p>
+    </header>
+    <aside class="light">
+      <p>Dark Mode</p>
+      <div class="switch">
+        <input type="checkbox" onclick="return lightModeToggle();" name="" id="">
+        <span class="slider"></span>
+      </div>
+    </aside>
+    <main class="light">
+      <section id="topRanks">
+        <div id="ranksContainer">
+          <div class="rank facebook">
+            <p class="handle">@nathanf</p>
+            <p><span>1987</span><br>Followers</p>
+            <p class="change up">12 Today</p>
+          </div>
+          <div class="rank twitter">
+            <p class="handle">@nathanf</p>
+            <p><span>1044</span><br>Followers</p>
+            <p class="change up">99 Today</p>
+          </div>
+          <div class="rank insta">
+            <p class="handle">@realnathanf</p>
+            <p><span>11k</span><br>Followers</p>
+            <p class="change up">1099 Today</p>
+          </div>
+          <div class="rank yt">
+            <p class="handle">Nathan F.</p>
+            <p><span>8239</span><br>Subscribers</p>
+            <p class="change down">144 Today</p>
+          </div>
+        </div>
+    </section>
+    <section id="stats">
+        <h2>Overview - Today</h2>
+        <div id="statsContainer">
+          <div class="stat fbViews">
+            <h3>Page Views</h3>
+            <p class="count">87</p>
+            <p class="change up">3%</p>
+          </div>
+          <div class="stat fbLikes">
+            <h3>Likes</h3>
+            <p class="count">52</p>
+            <p class="change down">2%</p>
+          </div>
+          <div class="stat instaLikes">
+            <h3>Likes</h3>
+            <p class="count">5462</p>
+            <p class="change up">2257%</p>
+          </div>
+          <div class="stat instaViews">
+            <h3>Profile Views</h3>
+            <p class="count">52k</p>
+            <p class="change up">1375%</p>
+          </div>
+          <div class="stat twRetweets">
+            <h3>Retweets</h3>
+            <p class="count">117</p>
+            <p class="change up">303%</p>
+          </div>
+          <div class="stat twLikes">
+            <h3>Likes</h3>
+            <p class="count">507</p>
+            <p class="change up">553%</p>
+          </div>
+          <div class="stat ytLikes">
+            <h3>Likes</h3>
+            <p class="count">107</p>
+            <p class="change down">19%</p>
+          </div>
+          <div class="stat ytViews">
+            <h3>Total Views</h3>
+            <p class="count">1407</p>
+            <p class="change down">12%</p>
+          </div>
+        </div>
+    </section>
+    </main>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+  <script src="js/light_mode_toggle.js"></script>
+</body>
+</html>

@@ -13,7 +13,7 @@ function toggle_menu(e){
 
 
 
-function preventScroll() {
+/* function preventScroll() {
     document.body.style.height = "100vh";
     document.body.style.overflowY = "hidden";
     document.body.style.position = "fixed";
@@ -21,4 +21,4 @@ function preventScroll() {
   
   function resumeScroll() {
     document.body.style = bodyStyle;
-  }
+  } */

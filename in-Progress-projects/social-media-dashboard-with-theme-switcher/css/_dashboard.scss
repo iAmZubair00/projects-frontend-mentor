@@ -1,0 +1,677 @@
+@import "variables";
+
+main {
+    @include flex(space-around, $direction: column);
+}
+
+aside {
+    @include flex(flex-end);
+    gap: 1vw;
+
+    p {
+        margin-top: 3px;
+    }
+}
+
+#ranksContainer {
+    /* @include flex(space-between); */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5vw;
+
+    .rank {
+        @include flex(space-between, center, column);
+        padding: 1rem 3vw;
+        text-align: center;
+
+        p:nth-of-type(2) {
+            margin: 0.4rem 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+
+
+        &.facebook {
+            border-top: 3px solid $facebook;
+
+            .handle {
+                &:before {
+                    content: url(/images/icon-facebook.svg);
+                    /* background: url(/images/icon-facebook.svg) no-repeat;
+                        width: 2rem;
+                        height: 2rem;
+                        position: absolute; */
+                    position: absolute;
+                    transform: translate(-1.7rem, -2px);
+                }
+            }
+        }
+
+        &.twitter {
+            border-top: 3px solid $twitter;
+
+            .handle {
+                &:before {
+                    content: url(/images/icon-twitter.svg);
+                    /* background: url(/images/icon-facebook.svg) no-repeat;
+                        width: 2rem;
+                        height: 2rem;
+                        position: absolute; */
+                    position: absolute;
+                    transform: translate(-1.7rem, -2px);
+                }
+            }
+        }
+
+        &.insta {
+            /* border-top: 3px solid $insta; */
+
+            /* &::before {
+                    content: "";
+                    background: $insta no-repeat top left;
+                    width: 100%;
+                    height: 0.2rem;
+                } */
+            .handle {
+                &:before {
+                    content: url(/images/icon-instagram.svg);
+                    /* background: url(/images/icon-facebook.svg) no-repeat;
+                        width: 2rem;
+                        height: 2rem;
+                        position: absolute; */
+                    position: absolute;
+                    transform: translate(-1.7rem, -2.5px);
+                }
+            }
+        }
+
+        &.yt {
+            border-top: 3px solid $youtube;
+
+            .handle {
+                &:before {
+                    content: url(/images/icon-youtube.svg);
+                    /* background: url(/images/icon-facebook.svg) no-repeat;
+                        width: 2rem;
+                        height: 2rem;
+                        position: absolute; */
+                    position: absolute;
+                    transform: translate(-1.7rem, -2.5px);
+                }
+            }
+        }
+    }
+}
+
+#statsContainer {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(2, auto);
+    gap: 1vw;
+
+    .stat {
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: "heading icon""count percent";
+
+        &.fbViews,
+        &.fbLikes {
+            h3 {
+                grid-area: heading;
+            }
+
+            p.count {
+                grid-area: count;
+
+                &:before {
+                    grid-area: icon;
+                    content: '';
+                    background: url(/images/icon-facebook.svg) no-repeat;
+                    width: 2rem;
+                    height: 2rem;
+                    position: absolute;
+                    transform: translateX(-3.1rem);
+                }
+            }
+
+            p.change {
+                grid-area: percent;
+            }
+
+        }
+
+        &.instaLikes,
+        &.instaViews {
+            p.count {
+                &:before {
+                    content: '';
+                    background: url(/images/icon-instagram.svg) no-repeat;
+                    width: 2rem;
+                    height: 2rem;
+                    position: absolute;
+                    transform: translateX(-3.1rem);
+                }
+            }
+
+        }
+
+        &.twRetweets,
+        &.twLikes {
+            p.count {
+                &:before {
+                    content: '';
+                    background: url(/images/icon-twitter.svg) no-repeat;
+                    width: 2rem;
+                    height: 2rem;
+                    position: absolute;
+                    transform: translateX(-3.1rem);
+                }
+            }
+        }
+
+        &.ytLikes,
+        &.ytViews {
+
+            p.count {
+                &:before {
+                    content: '';
+                    background: url(/images/icon-youtube.svg) no-repeat;
+                    width: 2rem;
+                    height: 2rem;
+                    position: absolute;
+                    transform: translateX(-3.1rem);
+                }
+            }
+        }
+    }
+}
+
+.change.down {
+    color: $brightRed;
+}
+
+.change.up {
+    color: $limeGreen;
+}
+
+.change.down::before {
+    content: url(/images/icon-down.svg);
+    transform: translate(-0.7rem, -0.1rem);
+    position: absolute;
+}
+
+.change.up::before {
+    /* content: '';
+        background: url(/images/icon-up.svg) no-repeat;
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        transform: translate(-0.7rem,0.3rem); */
+    content: url(/images/icon-up.svg);
+    transform: translate(-0.7rem, -0.2rem);
+    position: absolute;
+}
+
+.stat,
+.rank {
+    border-radius: 3px;
+}
+
+#ranksContainer,
+#statsContainer {
+    transform: translateY(-5.2rem);
+}
+
+@media (min-width: 375px){
+    main {
+        @include flex(space-around, $direction: column);
+    }
+
+    aside {
+        @include flex(flex-end);
+        gap: 1vw;
+
+        p {
+            margin-top: 3px;
+        }
+    }
+
+    #ranksContainer {
+        /* @include flex(space-between); */
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5vw;
+
+        .rank {
+            @include flex(space-between, center, column);
+            padding: 1rem 3vw;
+            text-align: center;
+
+            p:nth-of-type(2) {
+                margin: 0.4rem 0;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+
+
+
+            &.facebook {
+                border-top: 3px solid $facebook;
+
+                .handle {
+                    &:before {
+                        content: url(/images/icon-facebook.svg);
+                        /* background: url(/images/icon-facebook.svg) no-repeat;
+                        width: 2rem;
+                        height: 2rem;
+                        position: absolute; */
+                        position: absolute;
+                        transform: translate(-1.7rem, -2px);
+                    }
+                }
+            }
+
+            &.twitter {
+                border-top: 3px solid $twitter;
+
+                .handle {
+                    &:before {
+                        content: url(/images/icon-twitter.svg);
+                        /* background: url(/images/icon-facebook.svg) no-repeat;
+                        width: 2rem;
+                        height: 2rem;
+                        position: absolute; */
+                        position: absolute;
+                        transform: translate(-1.7rem, -2px);
+                    }
+                }
+            }
+
+            &.insta {
+                /* border-top: 3px solid $insta; */
+
+                /* &::before {
+                    content: "";
+                    background: $insta no-repeat top left;
+                    width: 100%;
+                    height: 0.2rem;
+                } */
+                .handle {
+                    &:before {
+                        content: url(/images/icon-instagram.svg);
+                        /* background: url(/images/icon-facebook.svg) no-repeat;
+                        width: 2rem;
+                        height: 2rem;
+                        position: absolute; */
+                        position: absolute;
+                        transform: translate(-1.7rem, -2.5px);
+                    }
+                }
+            }
+
+            &.yt {
+                border-top: 3px solid $youtube;
+
+                .handle {
+                    &:before {
+                        content: url(/images/icon-youtube.svg);
+                        /* background: url(/images/icon-facebook.svg) no-repeat;
+                        width: 2rem;
+                        height: 2rem;
+                        position: absolute; */
+                        position: absolute;
+                        transform: translate(-1.7rem, -2.5px);
+                    }
+                }
+            }
+        }
+    }
+
+    #statsContainer {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        grid-template-rows: repeat(2, auto);
+        gap: 1vw;
+
+        .stat {
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: repeat(2, auto);
+            grid-template-areas: "heading icon""count percent";
+
+            &.fbViews,
+            &.fbLikes {
+                h3 {
+                    grid-area: heading;
+                }
+
+                p.count {
+                    grid-area: count;
+
+                    &:before {
+                        grid-area: icon;
+                        content: '';
+                        background: url(/images/icon-facebook.svg) no-repeat;
+                        width: 2rem;
+                        height: 2rem;
+                        position: absolute;
+                        transform: translateX(-3.1rem);
+                    }
+                }
+
+                p.change {
+                    grid-area: percent;
+                }
+
+            }
+
+            &.instaLikes,
+            &.instaViews {
+                p.count {
+                    &:before {
+                        content: '';
+                        background: url(/images/icon-instagram.svg) no-repeat;
+                        width: 2rem;
+                        height: 2rem;
+                        position: absolute;
+                        transform: translateX(-3.1rem);
+                    }
+                }
+
+            }
+
+            &.twRetweets,
+            &.twLikes {
+                p.count {
+                    &:before {
+                        content: '';
+                        background: url(/images/icon-twitter.svg) no-repeat;
+                        width: 2rem;
+                        height: 2rem;
+                        position: absolute;
+                        transform: translateX(-3.1rem);
+                    }
+                }
+            }
+
+            &.ytLikes,
+            &.ytViews {
+
+                p.count {
+                    &:before {
+                        content: '';
+                        background: url(/images/icon-youtube.svg) no-repeat;
+                        width: 2rem;
+                        height: 2rem;
+                        position: absolute;
+                        transform: translateX(-3.1rem);
+                    }
+                }
+            }
+        }
+    }
+
+    .change.down {
+        color: $brightRed;
+    }
+
+    .change.up {
+        color: $limeGreen;
+    }
+
+    .change.down::before {
+        content: url(/images/icon-down.svg);
+        transform: translate(-0.7rem, -0.1rem);
+        position: absolute;
+    }
+
+    .change.up::before {
+        /* content: '';
+        background: url(/images/icon-up.svg) no-repeat;
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        transform: translate(-0.7rem,0.3rem); */
+        content: url(/images/icon-up.svg);
+        transform: translate(-0.7rem, -0.2rem);
+        position: absolute;
+    }
+
+    .stat,
+    .rank {
+        border-radius: 3px;
+    }
+
+    #ranksContainer,
+    #statsContainer {
+        transform: translateY(-5.2rem);
+    }
+
+}
+
+@media (min-width: 700px){
+
+    main {
+        @include flex(space-around, $direction: column);
+    }
+
+    aside{
+        @include flex(flex-end);
+        gap: 1vw;
+        p{
+            margin-top: 3px;
+        }
+    }
+
+    #ranksContainer {
+        /* @include flex(space-between); */
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(144px,1fr));
+        gap: 1.5vw;
+
+        .rank {
+            @include flex(space-between, center, column);
+            padding: 1rem 3vw;
+            text-align: center;
+
+            p:nth-of-type(2) {
+                margin: 0.4rem 0;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+
+            
+
+            &.facebook {
+                border-top: 3px solid $facebook;
+                .handle {
+                    &:before {
+                        content: url(/images/icon-facebook.svg);
+                        /* background: url(/images/icon-facebook.svg) no-repeat;
+                        width: 2rem;
+                        height: 2rem;
+                        position: absolute; */
+                        position: absolute;
+                        transform: translate(-1.7rem, -2px);
+                    }
+                }
+            }
+
+            &.twitter {
+                border-top: 3px solid $twitter;
+
+                .handle {
+                    &:before {
+                        content: url(/images/icon-twitter.svg);
+                        /* background: url(/images/icon-facebook.svg) no-repeat;
+                        width: 2rem;
+                        height: 2rem;
+                        position: absolute; */
+                        position: absolute;
+                        transform: translate(-1.7rem, -2px);
+                    }
+                }
+            }
+
+            &.insta {
+                /* border-top: 3px solid $insta; */
+
+                /* &::before {
+                    content: "";
+                    background: $insta no-repeat top left;
+                    width: 100%;
+                    height: 0.2rem;
+                } */
+                .handle {
+                    &:before {
+                        content: url(/images/icon-instagram.svg);
+                        /* background: url(/images/icon-facebook.svg) no-repeat;
+                        width: 2rem;
+                        height: 2rem;
+                        position: absolute; */
+                        position: absolute;
+                        transform: translate(-1.7rem, -2.5px);
+                    }
+                }
+            }
+
+            &.yt {
+                border-top: 3px solid $youtube;
+
+                .handle {
+                    &:before {
+                        content: url(/images/icon-youtube.svg);
+                        /* background: url(/images/icon-facebook.svg) no-repeat;
+                        width: 2rem;
+                        height: 2rem;
+                        position: absolute; */
+                        position: absolute;
+                        transform: translate(-1.7rem, -2.5px);
+                    }
+                }
+            }
+        }
+    }
+
+    #statsContainer {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        grid-template-rows: repeat(2, auto);
+        gap: 1vw;
+
+        .stat {
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: repeat(2,auto);
+            grid-template-rows: repeat(2,auto);
+            grid-template-areas: "heading icon" "count percent";
+            &.fbViews,
+            &.fbLikes {
+                h3{
+                    grid-area: heading;
+                }
+                p.count{
+                    grid-area: count;
+                    &:before {
+                        grid-area: icon;
+                        content: '';
+                        background: url(/images/icon-facebook.svg) no-repeat;
+                        width: 2rem;
+                        height: 2rem;
+                        position: absolute;
+                        transform: translateX(-3.1rem);
+                    }
+                }
+                p.change{
+                    grid-area: percent;
+                }
+                
+            }
+
+            &.instaLikes,
+            &.instaViews {
+                p.count{
+                    &:before {
+                        content: '';
+                        background: url(/images/icon-instagram.svg) no-repeat;
+                        width: 2rem;
+                        height: 2rem;
+                        position: absolute;
+                        transform: translateX(-3.1rem);
+                    }
+                }
+                
+            }
+
+            &.twRetweets,
+            &.twLikes {
+                p.count{
+                    &:before {
+                        content: '';
+                        background: url(/images/icon-twitter.svg) no-repeat;
+                        width: 2rem;
+                        height: 2rem;
+                        position: absolute;
+                        transform: translateX(-3.1rem);
+                    }
+                }
+            }
+
+            &.ytLikes,
+            &.ytViews {
+
+                p.count {
+                    &:before {
+                        content: '';
+                        background: url(/images/icon-youtube.svg) no-repeat;
+                        width: 2rem;
+                        height: 2rem;
+                        position: absolute;
+                        transform: translateX(-3.1rem);
+                    }
+                }
+            }
+        }
+    }
+
+    .change.down {
+        color: $brightRed;
+    }
+
+    .change.up {
+        color: $limeGreen;
+    }
+
+    .change.down::before {
+        content: url(/images/icon-down.svg);
+        transform: translate(-0.7rem, -0.1rem);
+        position: absolute;
+    }
+
+    .change.up::before {
+        /* content: '';
+        background: url(/images/icon-up.svg) no-repeat;
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        transform: translate(-0.7rem,0.3rem); */
+        content: url(/images/icon-up.svg);
+        transform: translate(-0.7rem, -0.2rem);
+        position: absolute;
+    }
+
+    .stat,
+    .rank {
+        border-radius: 3px;
+    }
+
+    #ranksContainer,
+    #statsContainer {
+        transform: translateY(-5.2rem);
+    }
+
+}

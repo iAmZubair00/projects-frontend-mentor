@@ -1,0 +1,950 @@
+/* Dark Theme colors */
+/* Light Theme colors */
+/* Toggle button colors */
+/* flex function */
+/* reset default margin,padding of everything to zero and set border-box*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* set default body styles */
+body {
+  /*  line-height: 1.5; */
+}
+
+/* Dark Theme colors */
+/* Light Theme colors */
+/* Toggle button colors */
+/* flex function */
+header.light,
+aside.light {
+  background-color: #f5f7ff;
+}
+
+main.light {
+  background-color: white;
+}
+
+header.light p {
+  color: #8b97c6;
+}
+
+aside.light p {
+  color: #8b97c6;
+}
+
+aside.light .switch {
+  background-color: #aeb3cb;
+}
+
+aside.light .switch .slider {
+  background-color: #f5f7ff;
+}
+
+.light #ranksContainer .rank {
+  background-color: #f0f2fa;
+}
+
+.light #ranksContainer .rank p span {
+  color: black;
+}
+
+.light #ranksContainer .rank .handle,
+.light #ranksContainer .rank p:nth-of-type(2) {
+  color: #8b97c6;
+}
+
+.light #statsContainer .stat {
+  background-color: #f0f2fa;
+}
+
+.light #statsContainer .stat .count {
+  color: black;
+}
+
+.light #statsContainer .stat h3 {
+  color: #8b97c6;
+}
+
+.light h1,
+.light h2 {
+  color: black;
+}
+
+/* Dark Theme colors */
+/* Light Theme colors */
+/* Toggle button colors */
+/* flex function */
+header,
+aside {
+  background-color: #1f212e;
+}
+
+header .switch,
+aside .switch {
+  background-color: linear-gradient(#378fe6, #3eda82);
+}
+
+header .switch .slider,
+aside .switch .slider {
+  background-color: #1f212e;
+}
+
+main {
+  background-color: #1e202a;
+}
+
+header p {
+  color: #8b97c6;
+}
+
+aside p {
+  color: #8b97c6;
+}
+
+#ranksContainer .rank {
+  background-color: #252a41;
+}
+
+#ranksContainer .rank p span {
+  color: white;
+}
+
+#ranksContainer .rank .handle, #ranksContainer .rank p:nth-of-type(2) {
+  color: #8b97c6;
+}
+
+#statsContainer .stat {
+  background-color: #252a41;
+}
+
+#statsContainer .stat .count {
+  color: white;
+}
+
+#statsContainer .stat h3 {
+  color: #8b97c6;
+}
+
+h1,
+h2 {
+  color: white;
+}
+
+/* @import "toggle-btn"; */
+/* Dark Theme colors */
+/* Light Theme colors */
+/* Toggle button colors */
+/* flex function */
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 1vw;
+}
+
+aside p {
+  margin-top: 3px;
+}
+
+#ranksContainer {
+  /* @include flex(space-between); */
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5vw;
+}
+
+#ranksContainer .rank {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem 3vw;
+  text-align: center;
+}
+
+#ranksContainer .rank p:nth-of-type(2) {
+  margin: 0.4rem 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#ranksContainer .rank.facebook {
+  border-top: 3px solid #198ff5;
+}
+
+#ranksContainer .rank.facebook .handle:before {
+  content: url(/images/icon-facebook.svg);
+  /* background: url(/images/icon-facebook.svg) no-repeat;
+                        width: 2rem;
+                        height: 2rem;
+                        position: absolute; */
+  position: absolute;
+  -webkit-transform: translate(-1.7rem, -2px);
+          transform: translate(-1.7rem, -2px);
+}
+
+#ranksContainer .rank.twitter {
+  border-top: 3px solid #1ca0f2;
+}
+
+#ranksContainer .rank.twitter .handle:before {
+  content: url(/images/icon-twitter.svg);
+  /* background: url(/images/icon-facebook.svg) no-repeat;
+                        width: 2rem;
+                        height: 2rem;
+                        position: absolute; */
+  position: absolute;
+  -webkit-transform: translate(-1.7rem, -2px);
+          transform: translate(-1.7rem, -2px);
+}
+
+#ranksContainer .rank.insta {
+  /* border-top: 3px solid $insta; */
+  /* &::before {
+                    content: "";
+                    background: $insta no-repeat top left;
+                    width: 100%;
+                    height: 0.2rem;
+                } */
+}
+
+#ranksContainer .rank.insta .handle:before {
+  content: url(/images/icon-instagram.svg);
+  /* background: url(/images/icon-facebook.svg) no-repeat;
+                        width: 2rem;
+                        height: 2rem;
+                        position: absolute; */
+  position: absolute;
+  -webkit-transform: translate(-1.7rem, -2.5px);
+          transform: translate(-1.7rem, -2.5px);
+}
+
+#ranksContainer .rank.yt {
+  border-top: 3px solid #c4032a;
+}
+
+#ranksContainer .rank.yt .handle:before {
+  content: url(/images/icon-youtube.svg);
+  /* background: url(/images/icon-facebook.svg) no-repeat;
+                        width: 2rem;
+                        height: 2rem;
+                        position: absolute; */
+  position: absolute;
+  -webkit-transform: translate(-1.7rem, -2.5px);
+          transform: translate(-1.7rem, -2.5px);
+}
+
+#statsContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[4];
+      grid-template-columns: repeat(4, auto);
+  -ms-grid-rows: (auto)[2];
+      grid-template-rows: repeat(2, auto);
+  gap: 1vw;
+}
+
+#statsContainer .stat {
+  padding: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  -ms-grid-rows: (auto)[2];
+      grid-template-rows: repeat(2, auto);
+      grid-template-areas: "heading icon" "count percent";
+}
+
+#statsContainer .stat.fbViews h3, #statsContainer .stat.fbLikes h3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: heading;
+}
+
+#statsContainer .stat.fbViews p.count, #statsContainer .stat.fbLikes p.count {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: count;
+}
+
+#statsContainer .stat.fbViews p.count:before, #statsContainer .stat.fbLikes p.count:before {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: icon;
+  content: '';
+  background: url(/images/icon-facebook.svg) no-repeat;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  -webkit-transform: translateX(-3.1rem);
+          transform: translateX(-3.1rem);
+}
+
+#statsContainer .stat.fbViews p.change, #statsContainer .stat.fbLikes p.change {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: percent;
+}
+
+#statsContainer .stat.instaLikes p.count:before, #statsContainer .stat.instaViews p.count:before {
+  content: '';
+  background: url(/images/icon-instagram.svg) no-repeat;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  -webkit-transform: translateX(-3.1rem);
+          transform: translateX(-3.1rem);
+}
+
+#statsContainer .stat.twRetweets p.count:before, #statsContainer .stat.twLikes p.count:before {
+  content: '';
+  background: url(/images/icon-twitter.svg) no-repeat;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  -webkit-transform: translateX(-3.1rem);
+          transform: translateX(-3.1rem);
+}
+
+#statsContainer .stat.ytLikes p.count:before, #statsContainer .stat.ytViews p.count:before {
+  content: '';
+  background: url(/images/icon-youtube.svg) no-repeat;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  -webkit-transform: translateX(-3.1rem);
+          transform: translateX(-3.1rem);
+}
+
+.change.down {
+  color: #dc414c;
+}
+
+.change.up {
+  color: #1db489;
+}
+
+.change.down::before {
+  content: url(/images/icon-down.svg);
+  -webkit-transform: translate(-0.7rem, -0.1rem);
+          transform: translate(-0.7rem, -0.1rem);
+  position: absolute;
+}
+
+.change.up::before {
+  /* content: '';
+        background: url(/images/icon-up.svg) no-repeat;
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        transform: translate(-0.7rem,0.3rem); */
+  content: url(/images/icon-up.svg);
+  -webkit-transform: translate(-0.7rem, -0.2rem);
+          transform: translate(-0.7rem, -0.2rem);
+  position: absolute;
+}
+
+.stat,
+.rank {
+  border-radius: 3px;
+}
+
+#ranksContainer,
+#statsContainer {
+  -webkit-transform: translateY(-5.2rem);
+          transform: translateY(-5.2rem);
+}
+
+@media (min-width: 375px) {
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  aside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    gap: 1vw;
+  }
+  aside p {
+    margin-top: 3px;
+  }
+  #ranksContainer {
+    /* @include flex(space-between); */
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5vw;
+  }
+  #ranksContainer .rank {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1rem 3vw;
+    text-align: center;
+  }
+  #ranksContainer .rank p:nth-of-type(2) {
+    margin: 0.4rem 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  #ranksContainer .rank.facebook {
+    border-top: 3px solid #198ff5;
+  }
+  #ranksContainer .rank.facebook .handle:before {
+    content: url(/images/icon-facebook.svg);
+    /* background: url(/images/icon-facebook.svg) no-repeat;
+                        width: 2rem;
+                        height: 2rem;
+                        position: absolute; */
+    position: absolute;
+    -webkit-transform: translate(-1.7rem, -2px);
+            transform: translate(-1.7rem, -2px);
+  }
+  #ranksContainer .rank.twitter {
+    border-top: 3px solid #1ca0f2;
+  }
+  #ranksContainer .rank.twitter .handle:before {
+    content: url(/images/icon-twitter.svg);
+    /* background: url(/images/icon-facebook.svg) no-repeat;
+                        width: 2rem;
+                        height: 2rem;
+                        position: absolute; */
+    position: absolute;
+    -webkit-transform: translate(-1.7rem, -2px);
+            transform: translate(-1.7rem, -2px);
+  }
+  #ranksContainer .rank.insta {
+    /* border-top: 3px solid $insta; */
+    /* &::before {
+                    content: "";
+                    background: $insta no-repeat top left;
+                    width: 100%;
+                    height: 0.2rem;
+                } */
+  }
+  #ranksContainer .rank.insta .handle:before {
+    content: url(/images/icon-instagram.svg);
+    /* background: url(/images/icon-facebook.svg) no-repeat;
+                        width: 2rem;
+                        height: 2rem;
+                        position: absolute; */
+    position: absolute;
+    -webkit-transform: translate(-1.7rem, -2.5px);
+            transform: translate(-1.7rem, -2.5px);
+  }
+  #ranksContainer .rank.yt {
+    border-top: 3px solid #c4032a;
+  }
+  #ranksContainer .rank.yt .handle:before {
+    content: url(/images/icon-youtube.svg);
+    /* background: url(/images/icon-facebook.svg) no-repeat;
+                        width: 2rem;
+                        height: 2rem;
+                        position: absolute; */
+    position: absolute;
+    -webkit-transform: translate(-1.7rem, -2.5px);
+            transform: translate(-1.7rem, -2.5px);
+  }
+  #statsContainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[4];
+        grid-template-columns: repeat(4, auto);
+    -ms-grid-rows: (auto)[2];
+        grid-template-rows: repeat(2, auto);
+    gap: 1vw;
+  }
+  #statsContainer .stat {
+    padding: 1rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+    -ms-grid-rows: (auto)[2];
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: "heading icon" "count percent";
+  }
+  #statsContainer .stat.fbViews h3, #statsContainer .stat.fbLikes h3 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: heading;
+  }
+  #statsContainer .stat.fbViews p.count, #statsContainer .stat.fbLikes p.count {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: count;
+  }
+  #statsContainer .stat.fbViews p.count:before, #statsContainer .stat.fbLikes p.count:before {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: icon;
+    content: '';
+    background: url(/images/icon-facebook.svg) no-repeat;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    -webkit-transform: translateX(-3.1rem);
+            transform: translateX(-3.1rem);
+  }
+  #statsContainer .stat.fbViews p.change, #statsContainer .stat.fbLikes p.change {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: percent;
+  }
+  #statsContainer .stat.instaLikes p.count:before, #statsContainer .stat.instaViews p.count:before {
+    content: '';
+    background: url(/images/icon-instagram.svg) no-repeat;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    -webkit-transform: translateX(-3.1rem);
+            transform: translateX(-3.1rem);
+  }
+  #statsContainer .stat.twRetweets p.count:before, #statsContainer .stat.twLikes p.count:before {
+    content: '';
+    background: url(/images/icon-twitter.svg) no-repeat;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    -webkit-transform: translateX(-3.1rem);
+            transform: translateX(-3.1rem);
+  }
+  #statsContainer .stat.ytLikes p.count:before, #statsContainer .stat.ytViews p.count:before {
+    content: '';
+    background: url(/images/icon-youtube.svg) no-repeat;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    -webkit-transform: translateX(-3.1rem);
+            transform: translateX(-3.1rem);
+  }
+  .change.down {
+    color: #dc414c;
+  }
+  .change.up {
+    color: #1db489;
+  }
+  .change.down::before {
+    content: url(/images/icon-down.svg);
+    -webkit-transform: translate(-0.7rem, -0.1rem);
+            transform: translate(-0.7rem, -0.1rem);
+    position: absolute;
+  }
+  .change.up::before {
+    /* content: '';
+        background: url(/images/icon-up.svg) no-repeat;
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        transform: translate(-0.7rem,0.3rem); */
+    content: url(/images/icon-up.svg);
+    -webkit-transform: translate(-0.7rem, -0.2rem);
+            transform: translate(-0.7rem, -0.2rem);
+    position: absolute;
+  }
+  .stat,
+  .rank {
+    border-radius: 3px;
+  }
+  #ranksContainer,
+  #statsContainer {
+    -webkit-transform: translateY(-5.2rem);
+            transform: translateY(-5.2rem);
+  }
+}
+
+@media (min-width: 700px) {
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  aside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    gap: 1vw;
+  }
+  aside p {
+    margin-top: 3px;
+  }
+  #ranksContainer {
+    /* @include flex(space-between); */
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(144px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(144px, 1fr));
+    gap: 1.5vw;
+  }
+  #ranksContainer .rank {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1rem 3vw;
+    text-align: center;
+  }
+  #ranksContainer .rank p:nth-of-type(2) {
+    margin: 0.4rem 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  #ranksContainer .rank.facebook {
+    border-top: 3px solid #198ff5;
+  }
+  #ranksContainer .rank.facebook .handle:before {
+    content: url(/images/icon-facebook.svg);
+    /* background: url(/images/icon-facebook.svg) no-repeat;
+                        width: 2rem;
+                        height: 2rem;
+                        position: absolute; */
+    position: absolute;
+    -webkit-transform: translate(-1.7rem, -2px);
+            transform: translate(-1.7rem, -2px);
+  }
+  #ranksContainer .rank.twitter {
+    border-top: 3px solid #1ca0f2;
+  }
+  #ranksContainer .rank.twitter .handle:before {
+    content: url(/images/icon-twitter.svg);
+    /* background: url(/images/icon-facebook.svg) no-repeat;
+                        width: 2rem;
+                        height: 2rem;
+                        position: absolute; */
+    position: absolute;
+    -webkit-transform: translate(-1.7rem, -2px);
+            transform: translate(-1.7rem, -2px);
+  }
+  #ranksContainer .rank.insta {
+    /* border-top: 3px solid $insta; */
+    /* &::before {
+                    content: "";
+                    background: $insta no-repeat top left;
+                    width: 100%;
+                    height: 0.2rem;
+                } */
+  }
+  #ranksContainer .rank.insta .handle:before {
+    content: url(/images/icon-instagram.svg);
+    /* background: url(/images/icon-facebook.svg) no-repeat;
+                        width: 2rem;
+                        height: 2rem;
+                        position: absolute; */
+    position: absolute;
+    -webkit-transform: translate(-1.7rem, -2.5px);
+            transform: translate(-1.7rem, -2.5px);
+  }
+  #ranksContainer .rank.yt {
+    border-top: 3px solid #c4032a;
+  }
+  #ranksContainer .rank.yt .handle:before {
+    content: url(/images/icon-youtube.svg);
+    /* background: url(/images/icon-facebook.svg) no-repeat;
+                        width: 2rem;
+                        height: 2rem;
+                        position: absolute; */
+    position: absolute;
+    -webkit-transform: translate(-1.7rem, -2.5px);
+            transform: translate(-1.7rem, -2.5px);
+  }
+  #statsContainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[4];
+        grid-template-columns: repeat(4, auto);
+    -ms-grid-rows: (auto)[2];
+        grid-template-rows: repeat(2, auto);
+    gap: 1vw;
+  }
+  #statsContainer .stat {
+    padding: 1rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+    -ms-grid-rows: (auto)[2];
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: "heading icon" "count percent";
+  }
+  #statsContainer .stat.fbViews h3, #statsContainer .stat.fbLikes h3 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: heading;
+  }
+  #statsContainer .stat.fbViews p.count, #statsContainer .stat.fbLikes p.count {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: count;
+  }
+  #statsContainer .stat.fbViews p.count:before, #statsContainer .stat.fbLikes p.count:before {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: icon;
+    content: '';
+    background: url(/images/icon-facebook.svg) no-repeat;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    -webkit-transform: translateX(-3.1rem);
+            transform: translateX(-3.1rem);
+  }
+  #statsContainer .stat.fbViews p.change, #statsContainer .stat.fbLikes p.change {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: percent;
+  }
+  #statsContainer .stat.instaLikes p.count:before, #statsContainer .stat.instaViews p.count:before {
+    content: '';
+    background: url(/images/icon-instagram.svg) no-repeat;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    -webkit-transform: translateX(-3.1rem);
+            transform: translateX(-3.1rem);
+  }
+  #statsContainer .stat.twRetweets p.count:before, #statsContainer .stat.twLikes p.count:before {
+    content: '';
+    background: url(/images/icon-twitter.svg) no-repeat;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    -webkit-transform: translateX(-3.1rem);
+            transform: translateX(-3.1rem);
+  }
+  #statsContainer .stat.ytLikes p.count:before, #statsContainer .stat.ytViews p.count:before {
+    content: '';
+    background: url(/images/icon-youtube.svg) no-repeat;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    -webkit-transform: translateX(-3.1rem);
+            transform: translateX(-3.1rem);
+  }
+  .change.down {
+    color: #dc414c;
+  }
+  .change.up {
+    color: #1db489;
+  }
+  .change.down::before {
+    content: url(/images/icon-down.svg);
+    -webkit-transform: translate(-0.7rem, -0.1rem);
+            transform: translate(-0.7rem, -0.1rem);
+    position: absolute;
+  }
+  .change.up::before {
+    /* content: '';
+        background: url(/images/icon-up.svg) no-repeat;
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        transform: translate(-0.7rem,0.3rem); */
+    content: url(/images/icon-up.svg);
+    -webkit-transform: translate(-0.7rem, -0.2rem);
+            transform: translate(-0.7rem, -0.2rem);
+    position: absolute;
+  }
+  .stat,
+  .rank {
+    border-radius: 3px;
+  }
+  #ranksContainer,
+  #statsContainer {
+    -webkit-transform: translateY(-5.2rem);
+            transform: translateY(-5.2rem);
+  }
+}
+
+body {
+  font-size: 14px;
+}
+
+#container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 2.5fr;
+      grid-template-rows: 1fr 2.5fr;
+      grid-template-areas: "head aside" "main main";
+  height: 100vh;
+}
+
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: head;
+}
+
+aside {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: aside;
+}
+
+main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: main;
+}
+
+main .rank p span {
+  font-size: 3rem;
+}
+
+main .count {
+  font-size: 2rem;
+}
+
+header p,
+aside p,
+.rank .handle,
+p:nth-of-type(2) span,
+.change {
+  font-weight: 700;
+}
+
+header,
+main,
+aside {
+  padding: 0 10vw;
+}
+
+header,
+aside {
+  padding-top: 2rem;
+}
+
+@media (min-width: 700px) {
+  body {
+    font-size: 14px;
+  }
+  #container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 2.5fr;
+        grid-template-rows: 1fr 2.5fr;
+        grid-template-areas: "head aside" "main main";
+    height: 100vh;
+  }
+  header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: head;
+  }
+  aside {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: aside;
+  }
+  main {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: main;
+  }
+  main .rank p span {
+    font-size: 3rem;
+  }
+  main .count {
+    font-size: 2rem;
+  }
+  header p,
+  aside p,
+  .rank .handle,
+  p:nth-of-type(2) span,
+  .change {
+    font-weight: 700;
+  }
+  header,
+  main,
+  aside {
+    padding: 0 10vw;
+  }
+  header,
+  aside {
+    padding-top: 2rem;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

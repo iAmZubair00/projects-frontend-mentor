@@ -1,0 +1,19 @@
+$red: hsl(0, 100%, 74%);
+$blue: hsl(248, 32%, 49%);
+$green: hsl(154, 59%, 51%);
+$opaqueGreen: hsla(154, 59%, 51%, 0.7);
+$darkBlue: hsl(249, 10%, 26%);
+$grayishBlue: hsl(246, 25%, 77%);
+
+@mixin flex($justify:initial,$align:initial,$direction:initial) {
+    display: flex;
+    @if $justify!=initial{
+        justify-content: $justify;
+    }
+    @if $align!=initial{
+        align-items: $align;
+    }
+    @if $direction!=initial{
+        flex-direction: $direction;
+    }
+}

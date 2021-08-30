@@ -1,0 +1,51 @@
+@import "variables";
+
+header,
+aside {
+    background-color: $darkBlueTopBG;
+    .switch{
+        background-color: $darkToggle;
+        .slider{
+            background-color: $darkBlueTopBG;
+        }
+    }
+}
+main{
+    background-color: $darkBlueBG;
+}
+header{
+    p{
+        color: $desatBlueTxt;
+    }
+}
+aside{
+    p{
+        color: $desatBlueTxt;
+    }
+}
+#ranksContainer{
+    .rank{
+        background-color: $darkDesatBlueCardBg;
+        p span{
+            color: white;
+        }
+        .handle,p:nth-of-type(2){
+            color: $desatBlueTxt;
+        }
+    }
+}
+#statsContainer{
+    .stat{
+        background-color: $darkDesatBlueCardBg;
+        .count{
+            color:white;
+        }
+        h3{
+            color: $desatBlueTxt;
+        }
+    }
+}
+h1,
+h2 {
+    color: white;
+}
