@@ -1,33 +1,40 @@
 @import "variables";
 
-header.light,
-aside.light {
-    background-color: $paleBlueTopBG;
-}
-
-main.light {
+#container.light {
     background-color: $whiteBG;
 }
 
-header.light {
-    p {
-        color: $darkGrayishBlueTxt;
-    }
-}
+.topContainer.light {
 
-aside.light {
-    p {
-        color: $darkGrayishBlueTxt;
+    background-color: $paleBlueTopBG;
+    
+    header {
+        p {
+            color: $darkGrayishBlueTxt;
+        }
     }
-    .switch{
-        background-color: $lightToggle;
-        .slider{
-            background-color: $paleBlueTopBG;
+
+    aside {
+        p {
+            color: $darkGrayishBlueTxt;
+        }
+
+        .switch {
+            background-color: $lightToggle;
+
+            .slider {
+                background-color: $paleBlueTopBG;
+            }
         }
     }
 }
 
-.light{
+
+
+
+
+
+#container.light{
     #ranksContainer {
         .rank {
             background-color: $lightGrayishBlueCardBg;
@@ -39,6 +46,9 @@ aside.light {
             .handle,
             p:nth-of-type(2) {
                 color: $darkGrayishBlueTxt;
+            }
+            &:hover{
+                background-color: $lightCardBgHover;
             }
         }
     }
@@ -54,6 +64,9 @@ aside.light {
             h3 {
                 color: $darkGrayishBlueTxt;
             }
+            &:hover {
+                background-color: $lightCardBgHover;
+            }
         }
     }
 
@@ -61,4 +74,7 @@ aside.light {
     h2 {
         color: black;
     }
+
 }
+
+

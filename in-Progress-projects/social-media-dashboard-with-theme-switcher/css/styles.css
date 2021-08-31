@@ -3,6 +3,7 @@
 /* Toggle button colors */
 /* flex function */
 /* reset default margin,padding of everything to zero and set border-box*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 *,
 *::before,
 *::after {
@@ -27,58 +28,65 @@ body {
 /* Light Theme colors */
 /* Toggle button colors */
 /* flex function */
-header.light,
-aside.light {
-  background-color: #f5f7ff;
-}
-
-main.light {
+#container.light {
   background-color: white;
 }
 
-header.light p {
-  color: #8b97c6;
-}
-
-aside.light p {
-  color: #8b97c6;
-}
-
-aside.light .switch {
-  background-color: #aeb3cb;
-}
-
-aside.light .switch .slider {
+.topContainer.light {
   background-color: #f5f7ff;
 }
 
-.light #ranksContainer .rank {
-  background-color: #f0f2fa;
-}
-
-.light #ranksContainer .rank p span {
-  color: black;
-}
-
-.light #ranksContainer .rank .handle,
-.light #ranksContainer .rank p:nth-of-type(2) {
+.topContainer.light header p {
   color: #8b97c6;
 }
 
-.light #statsContainer .stat {
-  background-color: #f0f2fa;
-}
-
-.light #statsContainer .stat .count {
-  color: black;
-}
-
-.light #statsContainer .stat h3 {
+.topContainer.light aside p {
   color: #8b97c6;
 }
 
-.light h1,
-.light h2 {
+.topContainer.light aside .switch {
+  background-color: #aeb3cb;
+}
+
+.topContainer.light aside .switch .slider {
+  background-color: #f5f7ff;
+}
+
+#container.light #ranksContainer .rank {
+  background-color: #f0f2fa;
+}
+
+#container.light #ranksContainer .rank p span {
+  color: black;
+}
+
+#container.light #ranksContainer .rank .handle,
+#container.light #ranksContainer .rank p:nth-of-type(2) {
+  color: #8b97c6;
+}
+
+#container.light #ranksContainer .rank:hover {
+  background-color: #E1E3F0;
+}
+
+#container.light #statsContainer .stat {
+  background-color: #f0f2fa;
+}
+
+#container.light #statsContainer .stat .count {
+  color: black;
+}
+
+#container.light #statsContainer .stat h3 {
+  color: #8b97c6;
+}
+
+#container.light #statsContainer .stat:hover {
+  background-color: #E1E3F0;
+}
+
+#container.light h1,
+#container.light h2 {
   color: black;
 }
 
@@ -86,30 +94,27 @@ aside.light .switch .slider {
 /* Light Theme colors */
 /* Toggle button colors */
 /* flex function */
-header,
-aside {
+#container {
+  background-color: #1e202a;
+}
+
+.topContainer {
   background-color: #1f212e;
 }
 
-header .switch,
+aside p {
+  color: #8b97c6;
+}
+
 aside .switch {
   background-color: linear-gradient(#378fe6, #3eda82);
 }
 
-header .switch .slider,
 aside .switch .slider {
   background-color: #1f212e;
 }
 
-main {
-  background-color: #1e202a;
-}
-
 header p {
-  color: #8b97c6;
-}
-
-aside p {
   color: #8b97c6;
 }
 
@@ -125,6 +130,10 @@ aside p {
   color: #8b97c6;
 }
 
+#ranksContainer .rank:hover {
+  background-color: #333A56;
+}
+
 #statsContainer .stat {
   background-color: #252a41;
 }
@@ -137,6 +146,10 @@ aside p {
   color: #8b97c6;
 }
 
+#statsContainer .stat:hover {
+  background-color: #333A56;
+}
+
 h1,
 h2 {
   color: white;
@@ -147,25 +160,42 @@ h2 {
 /* Light Theme colors */
 /* Toggle button colors */
 /* flex function */
+.topContainer {
+  border-radius: 0 0 15px 15px;
+}
+
+header::after {
+  content: '';
+  /* display: block; */
+  background-color: #8b97c6;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+}
+
 main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 2.5rem;
+  -webkit-transform: translateY(-5rem);
+          transform: translateY(-5rem);
 }
 
 aside {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   gap: 1vw;
 }
 
@@ -179,7 +209,7 @@ aside p {
   display: grid;
   -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5vw;
+  gap: 4.5vw;
 }
 
 #ranksContainer .rank {
@@ -275,11 +305,10 @@ aside p {
 #statsContainer {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (auto)[4];
-      grid-template-columns: repeat(4, auto);
-  -ms-grid-rows: (auto)[2];
-      grid-template-rows: repeat(2, auto);
-  gap: 1vw;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 4.5vw;
+  margin-top: 1.5rem;
 }
 
 #statsContainer .stat {
@@ -293,65 +322,63 @@ aside p {
       grid-template-areas: "heading icon" "count percent";
 }
 
-#statsContainer .stat.fbViews h3, #statsContainer .stat.fbLikes h3 {
+#statsContainer .stat h3 {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: heading;
 }
 
-#statsContainer .stat.fbViews p.count, #statsContainer .stat.fbLikes p.count {
+#statsContainer .stat p.change {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: percent;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+#statsContainer .stat p.count {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: count;
 }
 
-#statsContainer .stat.fbViews p.count:before, #statsContainer .stat.fbLikes p.count:before {
+#statsContainer .stat.fbViews:before, #statsContainer .stat.fbLikes:before {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: icon;
-  content: '';
-  background: url(/images/icon-facebook.svg) no-repeat;
-  width: 2rem;
-  height: 2rem;
-  position: absolute;
-  -webkit-transform: translateX(-3.1rem);
-          transform: translateX(-3.1rem);
+  content: url(/images/icon-facebook.svg);
+  -ms-grid-column-align: end;
+      justify-self: end;
 }
 
-#statsContainer .stat.fbViews p.change, #statsContainer .stat.fbLikes p.change {
-  -ms-grid-row: 2;
+#statsContainer .stat.instaLikes:before, #statsContainer .stat.instaViews:before {
+  -ms-grid-row: 1;
   -ms-grid-column: 2;
-  grid-area: percent;
+  grid-area: icon;
+  content: url(/images/icon-instagram.svg);
+  -ms-grid-column-align: end;
+      justify-self: end;
 }
 
-#statsContainer .stat.instaLikes p.count:before, #statsContainer .stat.instaViews p.count:before {
-  content: '';
-  background: url(/images/icon-instagram.svg) no-repeat;
-  width: 2rem;
-  height: 2rem;
-  position: absolute;
-  -webkit-transform: translateX(-3.1rem);
-          transform: translateX(-3.1rem);
+#statsContainer .stat.twRetweets:before, #statsContainer .stat.twLikes:before {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: icon;
+  content: url(/images/icon-twitter.svg);
+  -ms-grid-column-align: end;
+      justify-self: end;
 }
 
-#statsContainer .stat.twRetweets p.count:before, #statsContainer .stat.twLikes p.count:before {
-  content: '';
-  background: url(/images/icon-twitter.svg) no-repeat;
-  width: 2rem;
-  height: 2rem;
-  position: absolute;
-  -webkit-transform: translateX(-3.1rem);
-          transform: translateX(-3.1rem);
-}
-
-#statsContainer .stat.ytLikes p.count:before, #statsContainer .stat.ytViews p.count:before {
-  content: '';
-  background: url(/images/icon-youtube.svg) no-repeat;
-  width: 2rem;
-  height: 2rem;
-  position: absolute;
-  -webkit-transform: translateX(-3.1rem);
-          transform: translateX(-3.1rem);
+#statsContainer .stat.ytLikes:before, #statsContainer .stat.ytViews:before {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: icon;
+  content: url(/images/icon-youtube.svg);
+  -ms-grid-column-align: end;
+      justify-self: end;
 }
 
 .change.down {
@@ -387,484 +414,42 @@ aside p {
   border-radius: 3px;
 }
 
-#ranksContainer,
-#statsContainer {
-  -webkit-transform: translateY(-5.2rem);
-          transform: translateY(-5.2rem);
+.stat:hover,
+.rank:hover {
+  cursor: pointer;
 }
 
-@media (min-width: 375px) {
-  main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+@media (min-width: 600px) {
+  .topContainer {
+    border-radius: 0;
   }
-  aside {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    gap: 1vw;
-  }
-  aside p {
-    margin-top: 3px;
-  }
-  #ranksContainer {
-    /* @include flex(space-between); */
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5vw;
-  }
-  #ranksContainer .rank {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 1rem 3vw;
-    text-align: center;
-  }
-  #ranksContainer .rank p:nth-of-type(2) {
-    margin: 0.4rem 0;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-  #ranksContainer .rank.facebook {
-    border-top: 3px solid #198ff5;
-  }
-  #ranksContainer .rank.facebook .handle:before {
-    content: url(/images/icon-facebook.svg);
-    /* background: url(/images/icon-facebook.svg) no-repeat;
-                        width: 2rem;
-                        height: 2rem;
-                        position: absolute; */
-    position: absolute;
-    -webkit-transform: translate(-1.7rem, -2px);
-            transform: translate(-1.7rem, -2px);
-  }
-  #ranksContainer .rank.twitter {
-    border-top: 3px solid #1ca0f2;
-  }
-  #ranksContainer .rank.twitter .handle:before {
-    content: url(/images/icon-twitter.svg);
-    /* background: url(/images/icon-facebook.svg) no-repeat;
-                        width: 2rem;
-                        height: 2rem;
-                        position: absolute; */
-    position: absolute;
-    -webkit-transform: translate(-1.7rem, -2px);
-            transform: translate(-1.7rem, -2px);
-  }
-  #ranksContainer .rank.insta {
-    /* border-top: 3px solid $insta; */
-    /* &::before {
-                    content: "";
-                    background: $insta no-repeat top left;
-                    width: 100%;
-                    height: 0.2rem;
-                } */
-  }
-  #ranksContainer .rank.insta .handle:before {
-    content: url(/images/icon-instagram.svg);
-    /* background: url(/images/icon-facebook.svg) no-repeat;
-                        width: 2rem;
-                        height: 2rem;
-                        position: absolute; */
-    position: absolute;
-    -webkit-transform: translate(-1.7rem, -2.5px);
-            transform: translate(-1.7rem, -2.5px);
-  }
-  #ranksContainer .rank.yt {
-    border-top: 3px solid #c4032a;
-  }
-  #ranksContainer .rank.yt .handle:before {
-    content: url(/images/icon-youtube.svg);
-    /* background: url(/images/icon-facebook.svg) no-repeat;
-                        width: 2rem;
-                        height: 2rem;
-                        position: absolute; */
-    position: absolute;
-    -webkit-transform: translate(-1.7rem, -2.5px);
-            transform: translate(-1.7rem, -2.5px);
-  }
-  #statsContainer {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (auto)[4];
-        grid-template-columns: repeat(4, auto);
-    -ms-grid-rows: (auto)[2];
-        grid-template-rows: repeat(2, auto);
-    gap: 1vw;
-  }
-  #statsContainer .stat {
-    padding: 1rem;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (auto)[2];
-        grid-template-columns: repeat(2, auto);
-    -ms-grid-rows: (auto)[2];
-        grid-template-rows: repeat(2, auto);
-        grid-template-areas: "heading icon" "count percent";
-  }
-  #statsContainer .stat.fbViews h3, #statsContainer .stat.fbLikes h3 {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-area: heading;
-  }
-  #statsContainer .stat.fbViews p.count, #statsContainer .stat.fbLikes p.count {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: count;
-  }
-  #statsContainer .stat.fbViews p.count:before, #statsContainer .stat.fbLikes p.count:before {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    grid-area: icon;
-    content: '';
-    background: url(/images/icon-facebook.svg) no-repeat;
-    width: 2rem;
-    height: 2rem;
-    position: absolute;
-    -webkit-transform: translateX(-3.1rem);
-            transform: translateX(-3.1rem);
-  }
-  #statsContainer .stat.fbViews p.change, #statsContainer .stat.fbLikes p.change {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    grid-area: percent;
-  }
-  #statsContainer .stat.instaLikes p.count:before, #statsContainer .stat.instaViews p.count:before {
-    content: '';
-    background: url(/images/icon-instagram.svg) no-repeat;
-    width: 2rem;
-    height: 2rem;
-    position: absolute;
-    -webkit-transform: translateX(-3.1rem);
-            transform: translateX(-3.1rem);
-  }
-  #statsContainer .stat.twRetweets p.count:before, #statsContainer .stat.twLikes p.count:before {
-    content: '';
-    background: url(/images/icon-twitter.svg) no-repeat;
-    width: 2rem;
-    height: 2rem;
-    position: absolute;
-    -webkit-transform: translateX(-3.1rem);
-            transform: translateX(-3.1rem);
-  }
-  #statsContainer .stat.ytLikes p.count:before, #statsContainer .stat.ytViews p.count:before {
-    content: '';
-    background: url(/images/icon-youtube.svg) no-repeat;
-    width: 2rem;
-    height: 2rem;
-    position: absolute;
-    -webkit-transform: translateX(-3.1rem);
-            transform: translateX(-3.1rem);
-  }
-  .change.down {
-    color: #dc414c;
-  }
-  .change.up {
-    color: #1db489;
-  }
-  .change.down::before {
-    content: url(/images/icon-down.svg);
-    -webkit-transform: translate(-0.7rem, -0.1rem);
-            transform: translate(-0.7rem, -0.1rem);
-    position: absolute;
-  }
-  .change.up::before {
-    /* content: '';
-        background: url(/images/icon-up.svg) no-repeat;
-        position: absolute;
-        width: 1rem;
-        height: 1rem;
-        transform: translate(-0.7rem,0.3rem); */
-    content: url(/images/icon-up.svg);
-    -webkit-transform: translate(-0.7rem, -0.2rem);
-            transform: translate(-0.7rem, -0.2rem);
-    position: absolute;
-  }
-  .stat,
-  .rank {
-    border-radius: 3px;
+  header::after {
+    content: none;
   }
   #ranksContainer,
   #statsContainer {
-    -webkit-transform: translateY(-5.2rem);
-            transform: translateY(-5.2rem);
-  }
-}
-
-@media (min-width: 700px) {
-  main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  aside {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    gap: 1vw;
-  }
-  aside p {
-    margin-top: 3px;
-  }
-  #ranksContainer {
-    /* @include flex(space-between); */
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (minmax(144px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(144px, 1fr));
-    gap: 1.5vw;
-  }
-  #ranksContainer .rank {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 1rem 3vw;
-    text-align: center;
-  }
-  #ranksContainer .rank p:nth-of-type(2) {
-    margin: 0.4rem 0;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-  #ranksContainer .rank.facebook {
-    border-top: 3px solid #198ff5;
-  }
-  #ranksContainer .rank.facebook .handle:before {
-    content: url(/images/icon-facebook.svg);
-    /* background: url(/images/icon-facebook.svg) no-repeat;
-                        width: 2rem;
-                        height: 2rem;
-                        position: absolute; */
-    position: absolute;
-    -webkit-transform: translate(-1.7rem, -2px);
-            transform: translate(-1.7rem, -2px);
-  }
-  #ranksContainer .rank.twitter {
-    border-top: 3px solid #1ca0f2;
-  }
-  #ranksContainer .rank.twitter .handle:before {
-    content: url(/images/icon-twitter.svg);
-    /* background: url(/images/icon-facebook.svg) no-repeat;
-                        width: 2rem;
-                        height: 2rem;
-                        position: absolute; */
-    position: absolute;
-    -webkit-transform: translate(-1.7rem, -2px);
-            transform: translate(-1.7rem, -2px);
-  }
-  #ranksContainer .rank.insta {
-    /* border-top: 3px solid $insta; */
-    /* &::before {
-                    content: "";
-                    background: $insta no-repeat top left;
-                    width: 100%;
-                    height: 0.2rem;
-                } */
-  }
-  #ranksContainer .rank.insta .handle:before {
-    content: url(/images/icon-instagram.svg);
-    /* background: url(/images/icon-facebook.svg) no-repeat;
-                        width: 2rem;
-                        height: 2rem;
-                        position: absolute; */
-    position: absolute;
-    -webkit-transform: translate(-1.7rem, -2.5px);
-            transform: translate(-1.7rem, -2.5px);
-  }
-  #ranksContainer .rank.yt {
-    border-top: 3px solid #c4032a;
-  }
-  #ranksContainer .rank.yt .handle:before {
-    content: url(/images/icon-youtube.svg);
-    /* background: url(/images/icon-facebook.svg) no-repeat;
-                        width: 2rem;
-                        height: 2rem;
-                        position: absolute; */
-    position: absolute;
-    -webkit-transform: translate(-1.7rem, -2.5px);
-            transform: translate(-1.7rem, -2.5px);
-  }
-  #statsContainer {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (auto)[4];
-        grid-template-columns: repeat(4, auto);
-    -ms-grid-rows: (auto)[2];
-        grid-template-rows: repeat(2, auto);
-    gap: 1vw;
-  }
-  #statsContainer .stat {
-    padding: 1rem;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (auto)[2];
-        grid-template-columns: repeat(2, auto);
-    -ms-grid-rows: (auto)[2];
-        grid-template-rows: repeat(2, auto);
-        grid-template-areas: "heading icon" "count percent";
-  }
-  #statsContainer .stat.fbViews h3, #statsContainer .stat.fbLikes h3 {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-area: heading;
-  }
-  #statsContainer .stat.fbViews p.count, #statsContainer .stat.fbLikes p.count {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: count;
-  }
-  #statsContainer .stat.fbViews p.count:before, #statsContainer .stat.fbLikes p.count:before {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    grid-area: icon;
-    content: '';
-    background: url(/images/icon-facebook.svg) no-repeat;
-    width: 2rem;
-    height: 2rem;
-    position: absolute;
-    -webkit-transform: translateX(-3.1rem);
-            transform: translateX(-3.1rem);
-  }
-  #statsContainer .stat.fbViews p.change, #statsContainer .stat.fbLikes p.change {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    grid-area: percent;
-  }
-  #statsContainer .stat.instaLikes p.count:before, #statsContainer .stat.instaViews p.count:before {
-    content: '';
-    background: url(/images/icon-instagram.svg) no-repeat;
-    width: 2rem;
-    height: 2rem;
-    position: absolute;
-    -webkit-transform: translateX(-3.1rem);
-            transform: translateX(-3.1rem);
-  }
-  #statsContainer .stat.twRetweets p.count:before, #statsContainer .stat.twLikes p.count:before {
-    content: '';
-    background: url(/images/icon-twitter.svg) no-repeat;
-    width: 2rem;
-    height: 2rem;
-    position: absolute;
-    -webkit-transform: translateX(-3.1rem);
-            transform: translateX(-3.1rem);
-  }
-  #statsContainer .stat.ytLikes p.count:before, #statsContainer .stat.ytViews p.count:before {
-    content: '';
-    background: url(/images/icon-youtube.svg) no-repeat;
-    width: 2rem;
-    height: 2rem;
-    position: absolute;
-    -webkit-transform: translateX(-3.1rem);
-            transform: translateX(-3.1rem);
-  }
-  .change.down {
-    color: #dc414c;
-  }
-  .change.up {
-    color: #1db489;
-  }
-  .change.down::before {
-    content: url(/images/icon-down.svg);
-    -webkit-transform: translate(-0.7rem, -0.1rem);
-            transform: translate(-0.7rem, -0.1rem);
-    position: absolute;
-  }
-  .change.up::before {
-    /* content: '';
-        background: url(/images/icon-up.svg) no-repeat;
-        position: absolute;
-        width: 1rem;
-        height: 1rem;
-        transform: translate(-0.7rem,0.3rem); */
-    content: url(/images/icon-up.svg);
-    -webkit-transform: translate(-0.7rem, -0.2rem);
-            transform: translate(-0.7rem, -0.2rem);
-    position: absolute;
-  }
-  .stat,
-  .rank {
-    border-radius: 3px;
-  }
-  #ranksContainer,
-  #statsContainer {
-    -webkit-transform: translateY(-5.2rem);
-            transform: translateY(-5.2rem);
+    gap: 2.3vw;
   }
 }
 
 body {
   font-size: 14px;
+  font-family: 'Inter', sans-serif;
 }
 
 #container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 1fr 2.5fr;
-      grid-template-rows: 1fr 2.5fr;
-      grid-template-areas: "head aside" "main main";
-  height: 100vh;
-}
-
-header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: head;
-}
-
-aside {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: aside;
-}
-
-main {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: main;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 main .rank p span {
@@ -883,68 +468,52 @@ p:nth-of-type(2) span,
   font-weight: 700;
 }
 
-header,
-main,
-aside {
-  padding: 0 10vw;
+.topContainer {
+  padding: 0 7vw;
 }
 
-header,
-aside {
-  padding-top: 2rem;
+main {
+  padding: 0 7vw;
 }
 
-@media (min-width: 700px) {
-  body {
-    font-size: 14px;
-  }
+header {
+  padding: 2rem 0 1rem;
+}
+
+aside {
+  padding: 1rem 0 6rem;
+}
+
+@media (min-width: 600px) {
   #container {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 1fr 2.5fr;
-        grid-template-rows: 1fr 2.5fr;
-        grid-template-areas: "head aside" "main main";
-    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #container .topContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 2rem 8vw 8rem;
   }
   header {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-area: head;
+    padding: 0;
   }
   aside {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    grid-area: aside;
+    padding: 0;
   }
   main {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: main;
-  }
-  main .rank p span {
-    font-size: 3rem;
-  }
-  main .count {
-    font-size: 2rem;
-  }
-  header p,
-  aside p,
-  .rank .handle,
-  p:nth-of-type(2) span,
-  .change {
-    font-weight: 700;
-  }
-  header,
-  main,
-  aside {
-    padding: 0 10vw;
-  }
-  header,
-  aside {
-    padding-top: 2rem;
+    padding: 0 8vw;
   }
 }
 /*# sourceMappingURL=styles.css.map */

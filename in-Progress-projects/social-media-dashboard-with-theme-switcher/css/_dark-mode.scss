@@ -1,28 +1,35 @@
 @import "variables";
 
-header,
-aside {
+#container {
+    background-color: $darkBlueBG;
+}
+
+.topContainer{
     background-color: $darkBlueTopBG;
+}
+
+aside{
+    
+    p {
+        color: $desatBlueTxt;
+    }
+
     .switch{
         background-color: $darkToggle;
         .slider{
             background-color: $darkBlueTopBG;
         }
     }
+
 }
-main{
-    background-color: $darkBlueBG;
-}
+
+
 header{
     p{
         color: $desatBlueTxt;
     }
 }
-aside{
-    p{
-        color: $desatBlueTxt;
-    }
-}
+
 #ranksContainer{
     .rank{
         background-color: $darkDesatBlueCardBg;
@@ -31,6 +38,9 @@ aside{
         }
         .handle,p:nth-of-type(2){
             color: $desatBlueTxt;
+        }
+        &:hover{
+            background-color: $darkCardBgHover;
         }
     }
 }
@@ -42,6 +52,9 @@ aside{
         }
         h3{
             color: $desatBlueTxt;
+        }
+        &:hover {
+            background-color: $darkCardBgHover;
         }
     }
 }
