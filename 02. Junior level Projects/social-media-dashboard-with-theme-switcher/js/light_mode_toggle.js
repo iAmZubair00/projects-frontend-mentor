@@ -1,6 +1,7 @@
 containerElements=[
     document.querySelector('#container'),
-    document.querySelector('.topContainer')
+    document.querySelector('.topContainer'),
+    document.querySelector('.attribution'),
 ]
 
 function lightModeToggle(){

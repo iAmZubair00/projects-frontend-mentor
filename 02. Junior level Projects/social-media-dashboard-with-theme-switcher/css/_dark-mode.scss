@@ -14,13 +14,6 @@ aside{
         color: $desatBlueTxt;
     }
 
-    .switch{
-        background-color: $darkToggle;
-        .slider{
-            background-color: $darkBlueTopBG;
-        }
-    }
-
 }
 
 
@@ -61,4 +54,8 @@ header{
 h1,
 h2 {
     color: white;
+}
+
+.attribution{
+    background-color: $lightToggle;
 }

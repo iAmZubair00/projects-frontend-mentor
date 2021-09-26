@@ -44,14 +44,6 @@ body {
   color: #8b97c6;
 }
 
-.topContainer.light aside .switch {
-  background-color: #aeb3cb;
-}
-
-.topContainer.light aside .switch .slider {
-  background-color: #f5f7ff;
-}
-
 #container.light #ranksContainer .rank {
   background-color: #f0f2fa;
 }
@@ -90,6 +82,10 @@ body {
   color: black;
 }
 
+.attribution.light {
+  background-color: #E1E3F0;
+}
+
 /* Dark Theme colors */
 /* Light Theme colors */
 /* Toggle button colors */
@@ -104,14 +100,6 @@ body {
 
 aside p {
   color: #8b97c6;
-}
-
-aside .switch {
-  background-color: linear-gradient(#378fe6, #3eda82);
-}
-
-aside .switch .slider {
-  background-color: #1f212e;
 }
 
 header p {
@@ -155,13 +143,65 @@ h2 {
   color: white;
 }
 
-/* @import "toggle-btn"; */
+.attribution {
+  background-color: #aeb3cb;
+}
+
+/* Dark Theme colors */
+/* Light Theme colors */
+/* Toggle button colors */
+/* flex function */
+.toggleContainer input {
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  display: inline-block;
+  width: 2.6rem;
+  height: 1.3rem;
+  border-radius: 10px;
+  position: relative;
+  background-color: #aeb3cb;
+  cursor: pointer;
+}
+
+.slider::after {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #f5f7ff;
+  position: absolute;
+  top: 2.3px;
+  right: 2px;
+}
+
+input[type=checkbox]:checked + .slider {
+  background: -webkit-gradient(linear, left top, right top, from(#378fe6), to(#3eda82));
+  background: linear-gradient(90deg, #378fe6, #3eda82);
+}
+
+input[type=checkbox]:checked + .slider::after {
+  background: #1f212e;
+  left: 2px;
+}
+
+input[type=checkbox]:hover + .slider {
+  background: -webkit-gradient(linear, left top, right top, from(#378fe6), to(#3eda82));
+  background: linear-gradient(90deg, #378fe6, #3eda82);
+}
+
 /* Dark Theme colors */
 /* Light Theme colors */
 /* Toggle button colors */
 /* flex function */
 .topContainer {
   border-radius: 0 0 15px 15px;
+}
+
+header {
+  position: relative;
 }
 
 header::after {
@@ -171,6 +211,7 @@ header::after {
   position: absolute;
   width: 100%;
   height: 2px;
+  margin-top: 0.8rem;
 }
 
 main {
@@ -267,7 +308,9 @@ aside p {
 }
 
 #ranksContainer .rank.insta {
-  /* border-top: 3px solid $insta; */
+  border-top: 3px solid;
+  border-image-source: linear-gradient(90deg, #fdc468, #df4996);
+  border-image-slice: 1;
   /* &::before {
                     content: "";
                     background: $insta no-repeat top left;
@@ -430,6 +473,11 @@ aside p {
   #statsContainer {
     gap: 2.3vw;
   }
+}
+
+* {
+  -webkit-transition: 1.3s;
+  transition: 1.3s;
 }
 
 body {

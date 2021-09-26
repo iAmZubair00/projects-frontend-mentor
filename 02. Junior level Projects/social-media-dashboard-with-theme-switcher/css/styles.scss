@@ -2,10 +2,13 @@
 @import "reset";
 @import "light-mode";
 @import "dark-mode";
-/* @import "toggle-btn"; */
+@import "toggle-btn";
 @import "dashboard";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
+*{
+    transition: 1.3s;
+}
 
 body {
     font-size: 14px;
@@ -14,12 +17,6 @@ body {
 
 #container {
     @include flex(space-around, stretch, column);
-}
-
-header {
-}
-
-aside {
 }
 
 main {
@@ -81,32 +78,6 @@ aside {
     }
 
     
-
-    
-}
-
-
-
-@media (min-width: 900px) {
-
-
-    #container {
-        
-    }
-
-    header {
-        
-    }
-
-    aside {
-        
-    }
-
-    main {
-      
-       
-    }
-
 
     
 }

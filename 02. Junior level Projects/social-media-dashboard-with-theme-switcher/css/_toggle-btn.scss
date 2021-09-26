@@ -1,0 +1,37 @@
+@import "variables";
+
+.toggleContainer input{
+    width: 0;
+    height: 0;
+}
+
+.slider{
+    display: inline-block;
+    width: 2.6rem;
+    height: 1.3rem;
+    border-radius: 10px;
+    position: relative;
+    background-color: $lightToggle;
+    cursor: pointer;
+    &::after{
+        content: "";
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background-color: $paleBlueTopBG;
+        position: absolute;
+        top: 2.3px;
+        right: 2px;
+    }
+}
+
+input[type=checkbox]:checked + .slider {
+    background: $darkToggle;
+    &::after{
+        background: $darkBlueTopBG;
+        left: 2px;
+    }
+}
+input[type=checkbox]:hover+.slider {
+    background: $darkToggle;
+}
