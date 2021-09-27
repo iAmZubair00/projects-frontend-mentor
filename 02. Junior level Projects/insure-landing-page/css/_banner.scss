@@ -1,0 +1,131 @@
+@import "_variables";
+
+.banner {
+    background-color: $darkVoilet;
+    color: white;
+    @include flex(space-between, center, row-reverse);
+    position: relative;
+    .banner-img picture {
+        position: relative;
+        top: 3.5rem;
+        right: 5.5vw;
+    }
+
+    hr {
+        position: absolute;
+        top: 3.8rem;
+        left: 5.5vw;
+        width: 9vw;
+    }
+
+    .banner-content {
+        padding-left: 5.5vw;
+        width: 35vw;
+        margin-top: -5rem;
+        .plans-btn {
+            @include planBtnStyle(white, white);
+
+            &:hover {
+                background-color: white;
+                color: $darkVoilet;
+            }
+        }
+
+        p {
+            margin: 0.7rem 0 3rem;
+        }
+
+        
+    }
+    &::before {
+        content: '';
+        background: url(/images/bg-pattern-intro-left-desktop.svg) no-repeat;
+        position: absolute;
+        left: 0;
+        top: 70%;
+        width: 100%;
+        height: 100%;
+    }
+
+    &::after {
+        content: '';
+        background: url(/images/bg-pattern-intro-right-desktop.svg) no-repeat;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 25%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 943px){
+
+     .banner {
+         background-color: $darkVoilet;
+         color: white;
+         text-align: center;
+         @include flex(space-between, center, column);
+         .banner-img {
+             picture {
+                 position: static;
+                 img {
+                     width: 100vw;
+                 }
+             }
+         }
+
+         hr {
+             display: none;
+         }
+
+         .banner-content {
+             padding: 10rem 15vw;
+             width: 100vw;
+             margin-top: -6.5px;
+             position: relative;
+             .plans-btn {
+                 @include planBtnStyle(white, white);
+                z-index: 5;
+                 &:hover {
+                     background-color: white;
+                     color: $darkVoilet;
+                 }
+             }
+
+             p {
+                 margin: 0.7rem 0 3rem;
+             }
+
+             &::before {
+                 content: '';
+                 background: url(/images/bg-pattern-intro-left-mobile.svg) no-repeat;
+                 position: absolute;
+                 top: 0;
+                 left: 0;
+                 width: 11rem;
+                 height: 100%;
+             }
+
+             &::after {
+                 content: '';
+                 background: url(/images/bg-pattern-intro-right-mobile.svg) no-repeat;
+                 position: absolute;
+                 right: 0;
+                 top: 62%;
+                 width: 8rem;
+                 height: 100%;
+             }
+
+         }
+
+         &::before {
+             content: none;
+         }
+
+         &::after {
+             content: none;
+         }
+
+     }
+
+}

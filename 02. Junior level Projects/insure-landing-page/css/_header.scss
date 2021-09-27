@@ -1,0 +1,116 @@
+@import "_variables";
+
+
+header {
+    @include flex(space-between, center, row);
+    padding: 1.5rem 5.5vw;
+    .nav-links ul {
+        list-style: none;
+        @include flex(space-between);
+
+        li {
+            margin-left: 2.5em;
+
+            a {
+                text-decoration: none;
+                color: $darkGrayishVoilet;
+                font-weight: bold;
+                text-transform: uppercase;
+
+                &:hover {
+                    color: $darkVoilet;
+                }
+            }
+
+            .plans-btn {
+                @include planBtnStyle();
+
+                &:hover {
+                    background-color: $darkVoilet;
+                    color: white;
+                }
+            }
+
+        }
+    }
+
+    button.hamburger {
+        display: none;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 943px) {
+
+    header {
+        padding: 1.2rem 5vw;
+        .nav-links {
+            display: none;
+
+            ul {
+                @include flex(flex-start, center, column);
+
+                li {
+                    margin: 1.3rem 0;
+
+                    a {
+                        color: white;
+
+                        &:hover {
+                            color: $grayishBlue;
+                        }
+
+                        &:last-child {
+                            padding: 0.7rem 5.5rem;
+                        }
+                    }
+
+                    .plans-btn {
+                        @include planBtnStyle(white, white);
+
+                        &:hover {
+                            background-color: white;
+                            color: $darkVoilet;
+                        }
+                    }
+
+                    &:first-child {
+                        margin-top: 3rem;
+                    }
+
+                }
+            }
+
+        }
+
+        button.hamburger {
+            display: inline-block;
+            background: url(/images/icon-hamburger.svg) no-repeat;
+            border: none;
+            width: 2rem;
+            height: 2rem;
+
+            &.active {
+                background: url(/images/icon-close.svg);
+            }
+        }
+
+        .active~.nav-links {
+            display: inline-block;
+            background: url(/images/bg-pattern-mobile-nav.svg) no-repeat;
+            background-position: bottom;
+            background-size: 100% 40%;
+            background-color: $veryDarkVoilet;
+            color: white;
+            position: absolute;
+            top: 4rem;
+            left: 0;
+            right: 0;
+            width: 100vw;
+            height: 35rem;
+            z-index: 2;
+            
+        }
+    }
+    
+}

@@ -1,0 +1,53 @@
+@import "_variables";
+
+.more-work {
+    @include flex(space-between, center);
+    margin: 0 5.5vw 5rem;
+    padding: 3rem;
+    color: white;
+    background: url(/images/bg-pattern-how-we-work-desktop.svg) no-repeat;
+    background-color: $darkVoilet;
+    background-position-x: right;
+    background-size: auto 100%;
+
+    .plans-btn {
+        @include planBtnStyle(white, white);
+
+        &:hover {
+            background-color: white;
+            color: $darkVoilet;
+        }
+    }
+
+    h1 {
+        font-size: 3.42vw;
+        width: 27.5vw;
+
+    }
+}
+
+@media (max-width: 943px) {
+
+    .more-work{
+        @include flex(space-between,center,column);
+        text-align: center;
+        margin: 0 1.5rem 5rem;
+        background: url(/images/bg-pattern-how-we-work-mobile.svg) no-repeat;
+        background-color: $darkVoilet;
+        background-position-x: right;
+        background-size: auto 100%;
+        .plans-btn{
+            margin-top: 1.5rem;
+            @include planBtnStyle(white,white);
+            &:hover{
+                background-color: white;
+                color: $darkVoilet;
+            }
+        }
+        h1{
+            font-size: 45px;
+            width: 50vw;
+        }
+    }
+
+}

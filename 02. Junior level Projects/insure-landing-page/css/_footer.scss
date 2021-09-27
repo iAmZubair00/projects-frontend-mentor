@@ -1,0 +1,100 @@
+
+
+
+footer {
+    padding: 3rem 5vw;
+    background-color: $lightGray;
+    background: url(/images/bg-pattern-footer-desktop.svg) no-repeat;
+    .footer-social-bar {
+        @include flex(space-between);
+        margin-bottom: 2rem;
+    }
+
+    hr {
+        border: none;
+        border-top: 1px solid $darkGrayishVoiletOpac;
+    }
+
+    .footer-links {
+        margin-top: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        /* &::before{
+            content: '';
+            position: relative;
+            border: 1px solid red;
+            height: 0;
+        } */
+        >ul {
+            @include flex(space-between);
+            list-style: none;
+
+            ul {
+                list-style: none;
+
+                li {
+                    margin-bottom: 0.5rem;
+
+                    a {
+                        text-decoration: none;
+                        color: $darkVoilet;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+
+        .link-legend {
+            color: $darkGrayishVoilet;
+            margin-bottom: 1.5rem;
+        }
+
+
+    }
+}
+
+@media (max-width: 943px) {
+
+    footer {
+        padding: 3rem 1.5rem;
+        background: url(/images/bg-pattern-footer-mobile.svg) no-repeat;
+        .footer-social-bar {
+            @include flex(space-between, center, column);
+
+            .footer-social {
+                margin-top: 2rem;
+
+                img {
+                    margin: 0 0.5rem;
+                }
+            }
+        }
+
+        .footer-links {
+            text-align: center;
+            margin-top: 0;
+
+            /* &::before{
+                content: '';
+                position: relative;
+                border: 1px solid red;
+                height: 0;
+            } */
+            >ul {
+                @include flex(space-between, center, column);
+            }
+
+            .link-legend {
+                margin-top: 2rem;
+                margin-bottom: 1.1rem;
+            }
+
+
+        }
+    }
+
+}

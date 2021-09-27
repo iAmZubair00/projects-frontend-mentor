@@ -1,0 +1,73 @@
+@import "_variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import "_header";
+@import "_banner";
+@import "_features";
+@import "_more-work";
+@import "_footer";
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5rem;
+    overflow-x: hidden;
+}
+h1,h2{
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    line-height: 2.8rem;
+}
+h1{
+    font-size: 45px;
+}
+
+
+
+.attribution {
+    text-align: center;
+    color: hsl(230, 29%, 20%);
+    background-color: hsla(230, 29%, 20%, 0.3);
+    padding: 0.5rem;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1px;
+    a{
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 460px) {
+    .banner{
+        .banner-content{
+            
+        }
+    }
+}
+
+
+@media (max-width: 943px) {
+    
+    
+
+    .attribution {
+        text-align: center;
+        color: hsl(230, 29%, 20%);
+        background-color: hsla(230, 29%, 20%, 0.3);
+        padding: 0.4em;
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: 0.4px;
+        a{
+            text-decoration: none;
+        }
+    }
+}
