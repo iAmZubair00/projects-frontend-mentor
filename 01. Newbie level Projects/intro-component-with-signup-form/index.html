@@ -1,57 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./css/styles.css">
-  
-  <title>Frontend Mentor | Intro component with sign up form</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 14px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  <div class="content-container">
-    <div class="text-content">
-      <h1>Learn to code by watching others</h1>
-      <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-        but understanding how developers think is invaluable.</p>
-    </div>
-    <div class="form-container">
-      <div class="try-free">
-        <p><span>Try it free 7 days</span> then $20/mo. thereafter</p>
+    <title>Frontend Mentor | Intro component with sign up form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 14px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="content-container">
+      <div class="text-content">
+        <h1>Learn to code by watching others</h1>
+        <p>
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
       </div>
-      <div class="form-content">
-        <form action="">
-          <div class="first-name-field">
-            <input type="text" placeholder="First Name" name="firstName" onkeyup="return validate(event)"><p class="error">First Name cannot be empty</p>
-          </div>
-          <div class="last-name-field">
-            <input type="text" placeholder="Last Name" name="lastName" onkeyup="return validate(event)"><p class="error">Last Name cannot be empty</p>
-          </div>
-          <div class="email-field">
-            <input type="email" placeholder="Email Address" name="email" onkeyup="return validateEmail(event)"><p class="error">Looks like not an email</p>
-          </div>
-          <div class="password-field">
-            <input type="text" placeholder="Password" name="password" onkeyup="return validate(event)"><p class="error">Password cannot be empty.</p>
-          </div>
-          <button class="sbmt-btn">Claim your free trial</button>
-        </form>
-        <p class="terms">By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
+      <div class="form-container">
+        <div class="try-free">
+          <p><span>Try it free 7 days</span> then $20/mo. thereafter</p>
+        </div>
+        <div class="form-content">
+          <form>
+            <div class="first-name-field">
+              <label for="firstName" class="hidden">First Name</label>
+              <input
+                id="firstName"
+                type="text"
+                placeholder="First Name"
+                name="firstName"
+                onkeyup="return validate(event)"
+              />
+              <p class="error">First Name cannot be empty</p>
+            </div>
+            <div class="last-name-field">
+              <label for="lastName" class="hidden">Last Name</label>
+              <input
+                id="lastName"
+                type="text"
+                placeholder="Last Name"
+                name="lastName"
+                onkeyup="return validate(event)"
+              />
+              <p class="error">Last Name cannot be empty</p>
+            </div>
+            <div class="email-field">
+              <label for="email" class="hidden">Email</label>
+              <input
+                id="email"
+                type="email"
+                placeholder="Email Address"
+                name="email"
+                onkeyup="return validateEmail(event)"
+              />
+              <p class="error">Looks like not an email</p>
+            </div>
+            <div class="password-field">
+              <label for="password" class="hidden">Password</label>
+              <input
+                id="password"
+                type="text"
+                placeholder="Password"
+                name="password"
+                onkeyup="return validate(event)"
+              />
+              <p class="error">Password cannot be empty.</p>
+            </div>
+            <button type="submit" class="sbmt-btn">
+              Claim your free trial
+            </button>
+          </form>
+          <p class="terms">
+            By clicking the button, you are agreeing to our
+            <span>Terms and Services</span>
+          </p>
+        </div>
       </div>
-    </div>
-  </div>  
-  <script src="./js/formValidation.js"></script>
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Muhammad Zubair</a>.
-    </p>
-  </footer>
-</body>
+    </main>
+    <script src="./js/formValidation.js"></script>
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Muhammad Zubair</a>.
+      </p>
+    </footer>
+  </body>
 </html>

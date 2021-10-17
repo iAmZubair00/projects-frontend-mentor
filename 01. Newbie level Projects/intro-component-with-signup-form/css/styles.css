@@ -12,7 +12,7 @@ body {
   background-color: #ff7a7a;
   background-image: url(/images/bg-intro-mobile.png);
   font-size: 16px;
-  font-family: 'Poppins',sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .content-container {
@@ -139,6 +139,8 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    padding: 0;
+    min-height: 100vh;
   }
   .content-container .text-content {
     width: 30vw;
@@ -147,5 +149,12 @@ body {
   .content-container .text-content h1 {
     font-size: 2.7em;
   }
+  .content-container .sbmt-btn {
+    cursor: pointer;
+  }
+}
+
+.hidden {
+  display: none;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -1,110 +1,119 @@
-@import '_variables.scss';
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import "_variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 *,
 *::before,
-*::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    background-color: $red;
-    background-image: url(/images/bg-intro-mobile.png);
-    font-size: 16px;
-    font-family: 'Poppins',sans-serif;
+body {
+  background-color: $red;
+  background-image: url(/images/bg-intro-mobile.png);
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
 }
-.content-container{
-    @include flex(space-between,center,column);
-    color: white;
-    padding: 10vw 7vw;
-    text-align: center;
-    .text-content{
-        width: 80vw;
-        p{
-            margin-top: 1rem;
-        }
+.content-container {
+  @include flex(space-between, center, column);
+  color: white;
+  padding: 10vw 7vw;
+  text-align: center;
+  .text-content {
+    width: 80vw;
+    p {
+      margin-top: 1rem;
     }
-    .form-container{
-        margin-top: 3rem;
-        .try-free{
-            background-color: $blue;
-            padding: 0.8rem 4.3rem;
-            margin-bottom: 1rem;
-            border-radius: 0.3rem;
-            box-shadow: 0.5px 8px rgba(0,0,0,0.15);
-            span{
-                font-weight: bold;
-            }
-        }
-        .form-content{
-            background-color: white;
-            border-radius: 0.3rem;
-            box-shadow: 0.5px 8px rgba(0,0,0,0.15);
-            text-align: center;
-            padding: 1.2rem;
-            form{      
-                *{
-                width: 100%;
-                }
-                input{
-                    border: 1px solid $grayishBlue;
-                    border-radius: 0.3rem;
-                    padding: 1.1rem 1rem;
-                    margin-top: 1rem;
-                    font-weight: bold;
-                    &.error-style{
-                        border: 1px solid red;
-                        background: url(/images/icon-error.svg) no-repeat;
-                        background-position-x: right;
-                        background-position-y: center;
-                        color: red;
-                    }
-                    &:focus{
-                        border: 1px solid $darkBlue;
-                    }
-                }
-                .error{
-                    display: none;
-                    text-align: end;
-                    &.active{
-                        color: red;
-                        display: block;
-                    }
-                }
-                .sbmt-btn{
-                    background-color: $green;
-                    border: none;
-                    padding: 0.8rem 1.6rem;
-                    border-radius: 0.3rem;
-                    color: white;
-                    text-transform: uppercase;
-                    margin-top: 1rem;
-                    &:hover{
-                        background-color: $opaqueGreen;
-                    }
-                }
-            }
-            .terms{
-                margin-top: 0.8rem;
-                color: $grayishBlue;
-                span{
-                    color: $red;
-                }
-            }
-        }
-        
+  }
+  .form-container {
+    margin-top: 3rem;
+    .try-free {
+      background-color: $blue;
+      padding: 0.8rem 4.3rem;
+      margin-bottom: 1rem;
+      border-radius: 0.3rem;
+      box-shadow: 0.5px 8px rgba(0, 0, 0, 0.15);
+      span {
+        font-weight: bold;
+      }
     }
+    .form-content {
+      background-color: white;
+      border-radius: 0.3rem;
+      box-shadow: 0.5px 8px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      padding: 1.2rem;
+      form {
+        * {
+          width: 100%;
+        }
+        input {
+          border: 1px solid $grayishBlue;
+          border-radius: 0.3rem;
+          padding: 1.1rem 1rem;
+          margin-top: 1rem;
+          font-weight: bold;
+          &.error-style {
+            border: 1px solid red;
+            background: url(/images/icon-error.svg) no-repeat;
+            background-position-x: right;
+            background-position-y: center;
+            color: red;
+          }
+          &:focus {
+            border: 1px solid $darkBlue;
+          }
+        }
+        .error {
+          display: none;
+          text-align: end;
+          &.active {
+            color: red;
+            display: block;
+          }
+        }
+        .sbmt-btn {
+          background-color: $green;
+          border: none;
+          padding: 0.8rem 1.6rem;
+          border-radius: 0.3rem;
+          color: white;
+          text-transform: uppercase;
+          margin-top: 1rem;
+          &:hover {
+            background-color: $opaqueGreen;
+          }
+        }
+      }
+      .terms {
+        margin-top: 0.8rem;
+        color: $grayishBlue;
+        span {
+          color: $red;
+        }
+      }
+    }
+  }
 }
 
-@media (min-width:900px){
-    .content-container{
-        @include flex(space-around,center,row);
-        .text-content{
-            width: 30vw;
-            text-align: left;
-            h1{
-                font-size: 2.7em;
-            }
-        }
+@media (min-width: 900px) {
+  .content-container {
+    @include flex(space-around, center, row);
+    padding: 0;
+    min-height: 100vh;
+    .text-content {
+      width: 30vw;
+      text-align: left;
+      h1 {
+        font-size: 2.7em;
+      }
     }
+    .sbmt-btn {
+      cursor: pointer;
+    }
+  }
+}
+
+//other
+.hidden {
+  display: none;
 }
